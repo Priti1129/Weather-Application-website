@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Weather App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <header>
+      <div class="brand"><span class="dot"></span> Simple Weather</div>
+      <div class="search">
+        <input id="query" placeholder="Search city or place… (e.g., Indore, Paris, Tokyo)" />
+        <button id="searchBtn">Search</button>
+        <button class="geo-btn" id="geoBtn">Use my location</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="card current" id="currentCard">
+        <div>
+          <div class="place" id="place">—</div>
+          <div class="temp" id="temp">--°</div>
+          <div class="desc"><span class="emoji" id="emoji">⛅</span><span id="desc">Loading…</span><span class="badge" id="badge">—</span></div>
+          <div class="stats">
+            <div class="stat"><b>Feels like</b><span id="feels">—</span></div>
+            <div class="stat"><b>Humidity</b><span id="humidity">—</span></div>
+            <div class="stat"><b>Wind</b><span id="wind">—</span></div>
+          </div>
+          <div class="error" id="error"></div>
+        </div>
+        <div>
+          <div class="day" style="min-width:160px;">
+            <div style="font-size:12px; color:var(--muted)">Now</div>
+            <div class="emoji" id="bigEmoji" style="font-size:52px;">⛅</div>
+            <div id="bigDesc" style="margin-top:6px; font-weight:700;">—</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3 style="margin:2px 0 12px; font-size:16px; color:var(--muted); font-weight:600;">5‑Day Forecast</h3>
+        <div class="forecast" id="forecast"></div>
+      </section>
+    </main>
+
+    <footer>
+      <b>☀️BRINGING SUNSHINE TO YOUR SCREEN!</b> shruti🌤️
+    </footer>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
